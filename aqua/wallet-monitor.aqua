@@ -1,0 +1,21 @@
+import "@fluencelabs/aqua-lib/builtin.aqua"
+
+service NFTWalletMonitor("HelloPeer"):
+    hello(from: PeerId) -> string
+    monitor(from: PeerId, address: string) -> bool
+    report(from: PeerId, msg: string) -> bool
+
+func sayHello(targetPeerId: PeerId, targetRelayPeerId: PeerId) -> string:
+    on targetPeerId via targetRelayPeerId:
+        res <- NFTWalletMonitor.hello(%init_peer_id%)
+    <- res
+
+func startMonitor(targetPeerId: PeerId, targetRelayPeerId: PeerId, address: string) -> bool:
+    on targetPeerId via targetRelayPeerId:
+        res <- NFTWalletMonitor.monitor(%init_peer_id%, address)
+    <- res
+
+func reportMsg(targetPeerId: PeerId, targetRelayPeerId: PeerId, msg: string) -> bool:
+    on targetPeerId via targetRelayPeerId:
+        res <- NFTWalletMonitor.report(%init_peer_id%, msg)
+    <- res

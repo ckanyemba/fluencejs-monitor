@@ -1,3 +1,35 @@
+# Fluencejs Monitor
+
+This demo application can monitor NFT activities of a specific wallet on both OpenSea and Rarible. 
+
+Live Demo: https://youtu.be/9POM23Nzxa4
+
+This application is powered by FluenceJS and Aqua. Please don't hesitate to open issues if you have any questions.
+
+## Installation
+
+### Testnet
+
+First you have to apply a testnet key from opensea at here: https://docs.opensea.io/reference/request-an-api-key. Store the api key in the `.env` file (create one if it doesn't exist).
+
+```
+REACT_APP_OS_API_KEY = 'xxxxxx'
+```
+
+Then you can clone this project and `yarn`, `yarn run compile-aqua`, `yarn start` sequentially to run.
+
+### Mainnet
+
+First you have to apply a mainnet key from opensesa and rarible. Store the api key in the `.env` file (create one if it doesn't exist).
+
+```
+REACT_APP_OS_API_KEY = 'xxxxxx'
+```
+
+Then you can clone this project, editing line 15-16 in `src/App.tsx` to mainnet URL, and use `yarn`, `yarn run compile-aqua`, `yarn start` sequentially to run.
+
+---
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
