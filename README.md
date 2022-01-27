@@ -2,7 +2,7 @@
 
 This demo application can monitor NFT activities of a specific wallet on both OpenSea and Rarible. 
 
-Live Demo: https://youtu.be/9POM23Nzxa4
+Live Demo: waiting...
 
 This application is powered by FluenceJS and Aqua. Please don't hesitate to open issues if you have any questions.
 
